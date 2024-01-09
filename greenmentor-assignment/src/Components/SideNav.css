@@ -49,7 +49,7 @@
     line-height: 1.125rem;
     /* 128.571% */
     text-transform: uppercase;
-    margin-left: 1.25rem;
+    /* margin-left: 1.25rem; */
 }
 
 .data-in-section-sidenav>div:nth-child(2) {
