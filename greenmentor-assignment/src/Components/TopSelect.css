@@ -1,0 +1,31 @@
+.top-select-main-container{
+    display: flex;
+    justify-content: end;
+    margin-right: 4.92rem;
+    margin-top: 1.75rem;
+}
+
+.top-select-container {
+    display: inline-flex;
+    height: 2rem;
+    padding: 0rem 0.75rem;
+    /* width: 12.6rem; */
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    font-weight: 500;
+    border: 1px solid #02AB6C;
+    border-radius: 0.5rem;
+    color: #0000007A;
+}
+
+.select {
+    background-color: transparent;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #02AB6C;
+    
+}
