@@ -1,7 +1,8 @@
 .sidenav-container {
     background-color: #181818;
     width: 15.6rem;
-    height: 1306px;
+    height: 96.85%;
+    max-height: 97.2%;
 }
 
 .sidenav-img {
@@ -57,6 +58,18 @@
     align-items: center;
     width: 13.6875rem;
     height: 3.125rem;
+}
+
+.energy {
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 0.56rem;
+    line-height: 18px;
+    /* 120% */
 }
 
 .data-in-section-sidenav>div:nth-child(2)>p {
@@ -165,9 +178,8 @@
     line-height: 1.125rem;
 }
 
-.analyze-section-sidenav>div:nth-child(2)>img {
-    /* margin-left: 1.25rem; */
-}
+
+
 
 .analyze-section-sidenav>div:nth-child(3) {
     display: flex;
@@ -228,4 +240,25 @@
     font-weight: 500;
     line-height: 1.125rem;
     /* 150% */
+}
+
+.sidenav-last-section {
+    display: flex;
+    width: 15.6rem;
+    height: 3rem;
+    padding: 0.5rem 0rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(0deg, #02AB6C 0%, #02AB6C 100%), #FAFBFC;
+}
+
+.sidenav-last-section>p {
+    color: #FFF;
+    /* font-family: HelveticaNeue; */
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
 }

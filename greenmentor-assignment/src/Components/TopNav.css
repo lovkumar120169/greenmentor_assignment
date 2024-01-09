@@ -71,15 +71,24 @@
 }
 
 .notification-text {
+    position: absolute;
+    right: 42px;
+    top: 18px;
     display: flex;
-    width: 0.875rem;
-    height: 0.875rem;
-    padding: 0.125rem;
+    width: 14px;
+    height: 14px;
+    padding: 2px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: 10px;
     flex-shrink: 0;
-    border-radius: 6.25rem;
+    border-radius: 100px;
+    color: #FFF;
+    text-align: center;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     background: linear-gradient(0deg, #EA7E7E 0%, #EA7E7E 100%), #FFF;
 }
