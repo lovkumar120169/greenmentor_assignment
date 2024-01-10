@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# GreenMentor - Frontend Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This repository contains the code for a frontend assignment aimed at creating a single-page app for a GreenMentor Assignment. The project is designed to replicate the UI provided in the Figma design and implement various functionalities outlined in the problem statement.
 
-In the project directory, you can run:
+## Figma Design
 
-### `npm start`
+[Figma Design Link](https://www.figma.com/file/fAtDdzv4g2OgF16zGxwtfn/Frontend-Assignment-V1?type=design&node-id=0-1&mode=design&t=xs8VQ4v3VMcS1AKR-0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Sidebar:**
+   - Four options and one button.
+   - Clicking on the first option (Energy) should open collapsible multiple options.
 
-### `npm test`
+2. **Date Filters:**
+   - Filtering out data for selected dates.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Charts and Tables:**
+   - Populate charts and tables using the provided dataset.
+   - Legends can be switched off/on in all charts.
+   - The pie chart should adjust back to 100% based on the new distribution when any legend is switched off.
 
-### `npm run build`
+4. **Supplier Table:**
+   - YOY increase/decrease highlighted with colors (red for positive, green for negative) and the appropriate arrow type.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. **Responsiveness:**
+   - Application should be responsive for multiple screen sizes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. **Bonus:**
+   - Bonus points for replicating the frame as it is in the Figma design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Chakra UI
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the Repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+git clone https://github.com/lovkumar120169/greenmentor_assignment.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+2. **Navigate to the Project Directory:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+cd greenmentor-assignment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+3. **Install Dependencies:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+bash
+npm install
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Run the Application:**
 
-### Making a Progressive Web App
+bash
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Screenshots/GIFs
+# Large Screen View
 
-### Deployment
+![Screenshot 2024-01-10 165055](https://github.com/lovkumar120169/LeetCode/assets/119415006/50605268-534e-444d-b5cf-6fc0aa8be862)
+![Screenshot 2024-01-10 165122](https://github.com/lovkumar120169/LeetCode/assets/119415006/812bc6bc-7fa6-4635-a4fc-5add48fb85a2)
+![Screenshot 2024-01-10 165141](https://github.com/lovkumar120169/LeetCode/assets/119415006/741581f4-bf36-4d49-97f1-532b0a0ab1c1)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Medium Screen View
 
-### `npm run build` fails to minify
+![Screenshot 2024-01-10 165209](https://github.com/lovkumar120169/LeetCode/assets/119415006/f13f4536-0c8a-4368-bfa6-0e5611f702c1)
+![Screenshot 2024-01-10 165229](https://github.com/lovkumar120169/LeetCode/assets/119415006/573acc42-18b5-4a23-88ae-43b6ec3d52d0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Small Screen View 
+
+![Screenshot 2024-01-10 163116](https://github.com/lovkumar120169/LeetCode/assets/119415006/968e890d-54d1-4418-aeae-32f8f2859980)
+<br/>
+![Screenshot 2024-01-10 163131](https://github.com/lovkumar120169/LeetCode/assets/119415006/63a50779-5d3d-476a-8c27-65e7ae9e0f89)
+<br/>
+![Screenshot 2024-01-10 163146](https://github.com/lovkumar120169/LeetCode/assets/119415006/ebe10c8b-7f42-4caa-91f0-7c88e3c2423a)
+
+
+
+## Demo
+
+Check out the live demo on [Netlify](https://green-mentor-assignment.netlify.app/).
