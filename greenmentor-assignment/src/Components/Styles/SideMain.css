@@ -1,5 +1,4 @@
-
-.chart-table-container{
+.chart-table-container {
     display: flex;
     margin-left: 1.5rem;
     gap: 2.06rem;
@@ -15,9 +14,9 @@
         gap: 0;
     }
 
-    .chart-table-container > div {
+    .chart-table-container>div {
         width: 90%;
-        
+
         margin: auto;
         margin-bottom: 15px;
     }

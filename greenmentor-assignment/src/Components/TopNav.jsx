@@ -1,14 +1,16 @@
 import React, { useContext } from 'react'
-import "./TopNav.css";
+import "./Styles/TopNav.css";
 import { Fakecontext } from './ContextAPI';
+import { GiHamburgerMenu } from "react-icons/gi";
+import logo from "../assets/Images/logo.png";
 
 export const TopNav = () => {
-  const {value}=useContext(Fakecontext)
+  const { value, SetOpen } = useContext(Fakecontext)
 
   return (
     <div className='top-navbar-container'>
-      <div>
-        <div className='tnb-category-img'>
+      <div id='tnb-category-img'>
+        <div className='tnb-category-img' >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M16.7879 17.3556L14.2268 14.7939L14.5099 14.5111C15.7157 13.3066 16.3797 11.7048 16.3797 10.0006V9.60059H19.9993V10.0006C19.9993 12.6724 18.9592 15.1839 17.0709 17.0728L16.7879 17.3556ZM15.3507 14.7865L16.7819 16.2181C18.254 14.6151 19.0987 12.5754 19.191 10.4005H17.1687C17.0796 12.0354 16.4441 13.568 15.3507 14.7865ZM7.18987 4.2601L5.80557 0.917899L6.17317 0.763999C7.38397 0.257 8.67057 0 9.99747 0H10.3975V3.6208L9.99777 3.621C9.16092 3.62068 8.33227 3.78581 7.55947 4.1069L7.18987 4.2601ZM6.85287 1.3562L7.62687 3.2247C8.2619 3.00156 8.92531 2.86942 9.59737 2.8322V0.808399C8.65247 0.848899 7.73257 1.0323 6.85287 1.3562Z" fill="#02AB6C" />
             <path d="M16.7879 17.3556L14.2268 14.7939L14.5099 14.5111C15.7157 13.3066 16.3797 11.7048 16.3797 10.0006V9.60059H19.9993V10.0006C19.9993 12.6724 18.9592 15.1839 17.0709 17.0728L16.7879 17.3556ZM15.3507 14.7865L16.7819 16.2181C18.254 14.6151 19.0987 12.5754 19.191 10.4005H17.1687C17.0796 12.0354 16.4441 13.568 15.3507 14.7865ZM7.18987 4.2601L5.80557 0.917899L6.17317 0.763999C7.38397 0.257 8.67057 0 9.99747 0H10.3975V3.6208L9.99777 3.621C9.16092 3.62068 8.33227 3.78581 7.55947 4.1069L7.18987 4.2601ZM6.85287 1.3562L7.62687 3.2247C8.2619 3.00156 8.92531 2.86942 9.59737 2.8322V0.808399C8.65247 0.848899 7.73257 1.0323 6.85287 1.3562Z" fill="#02AB6C" />
@@ -20,6 +22,10 @@ export const TopNav = () => {
         <p>{value}</p>
       </div>
 
+      <div id='hamburger-logo-container'>
+        <GiHamburgerMenu onClick={() => SetOpen(true)} />
+        <img style={{ width: "100px" }} src="https://s3-alpha-sig.figma.com/img/7017/0b71/3d08985c3dc4a95e3950693faa9eed19?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ic-~0BNRO2zRSZllD1QqbD~tbPRrZj3gPKGtNLZ0Aa5OBbrZ3Y~6eusCcX5-9mwI7LqUrdx2BbIH6JT427RKRZw8G59blcAXx9GPlDbmjNG63EBRM~v-o6CBi4gmoN-EmGSd~MUoQgIEpAZ1wpuSRwNM-zygpRe7FbZTSMcz0MGI~yufsy~SdGuD1vYrZxweO5~y9xuwaysTwN8bekP85vgonpdosGlv-4SpSu2RN5Q~BlDbPz-ufP3KAtwSsB8~UdHj~aNmkdX~rBeFQTF-be55TfZl02MyqRUhbOaT53HkIm2-CMwqMeNuYVcbBJreVg8iIF3yGkoTBiImoN0hiA__" alt="" />
+      </div>
 
       <div>
         <img className='profile-img' src="https://s3-alpha-sig.figma.com/img/b270/0d23/767117420f0f997824b701ee2fce525b?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=e4i3kXNB6MQGcPoEeb9QxMjz6dbw1fpFjujfUGGbjo603Q5vY-EklfYygLXWdxCI53s5vi3cjwm97mbsAXzQKS4arCB2AkLWpaaTztNU5-XBkZMyVxyglLxEBu1JKnPF9iBEzVOmEeNBkv4c2BQbfWfDL8hIQjcpklLa-LZZT7lTix9KnSK3ujpw15mv0pxwBYn2ZPmpT0X9AKjRK7jzoW6zG0BUUxKuQRxBx984rjwThMCTeq2r6RnyZn-69y85-DUdsUb7C4gD7QXba24fUA3K6ZI-wCIPo8yGlw6ueLEd~BwjVKQNlUgsmXMUL3XPFWgYoAZRTxWk9YMi8Nen7A__" alt="" />

@@ -1,6 +1,6 @@
+/* Card Container Styles */
 .card-container {
     display: flex;
-    /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
     gap: 20px;
     justify-content: space-between;
     margin-top: 2.44rem;
@@ -8,6 +8,7 @@
     margin-left: 1.5rem;
 }
 
+/* Card Inner Div Styles */
 .card-inner-div {
     display: flex;
     justify-content: space-between;
@@ -19,55 +20,58 @@
     border-radius: 0.5rem;
     border: 1px solid #f8cdca;
     border-left: 6px solid #E03021;
-    /* margin-bottom: 3rem; */
 }
-.card-inner-div p:last-child{
+
+/* Color for the last paragraph in card inner div */
+.card-inner-div p:last-child {
     color: #c65353;
 }
 
-
-
-.card-inner-div:nth-child(2){
+/* Styles for the second card inner div */
+.card-inner-div:nth-child(2) {
     border: 1px solid #fff1c2;
     border-left: 6px solid #ffc400;
-}
-
-.card-inner-div:nth-child(3){
-    border: 1px solid #d0eed8;
-    border-left: 6px solid #37aa57;
-}
-.card-inner-div>p{
-    font-size: 0.9375rem;
-}
-
-.card-inner-div:nth-child(2) {
     margin-top: 1.5rem;
 }
 
-.card-container>div {
+/* Styles for the third card inner div */
+.card-inner-div:nth-child(3) {
+    border: 1px solid #d0eed8;
+    border-left: 6px solid #37aa57;
+}
+
+/* Font size for paragraph inside card inner div */
+.card-inner-div > p {
+    font-size: 0.9375rem;
+}
+
+/* Card Styles */
+.card-container > div {
     border-radius: 0.75rem;
     border: 1px solid #EBEBEB;
     background: #FFF;
     box-shadow: 0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px rgba(0, 0, 0, 0.01), 0px 9px 80px 0px rgba(0, 0, 0, 0.02);
     width: 16.7rem;
-    height: 8.8rem; 
+    height: 8.8rem;
     padding: 1.2rem;
 }
 
-.card-container>div>div {
+/* Styles for elements inside card container */
+.card-container > div > div {
     display: flex;
     align-items: center;
     gap: 2px;
     font-weight: 500;
 }
 
-.card-container>div svg {
+/* SVG styles inside card container */
+.card-container > div svg {
     margin-top: 3px;
 }
 
-.card-container>div>p{
+/* Styles for paragraph inside card container */
+.card-container > div > p {
     color: rgba(0, 0, 0, 0.67);
-    /* text-align: center; */
     font-family: Poppins;
     font-size: 0.7rem;
     font-style: italic;
@@ -75,7 +79,8 @@
     line-height: normal;
 }
 
-.card-container>div:last-child {
+/* Styles for the last card in container */
+.card-container > div:last-child {
     border-radius: 0.75rem;
     border: 1px solid #EBEBEB;
     background: rgba(2, 171, 108, 0.67);
@@ -84,26 +89,23 @@
     height: 9rem;
 }
 
-.card-container>div:last-child>h2 {
+/* Styles for heading inside the last card */
+.card-container > div:last-child > h2 {
     color: #FFF;
-    /* font-family: HelveticaNeue; */
     font-size: 0.875rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.125rem;
-    /* 128.571% */
 }
 
-.card-container>div:last-child>h1 {
+/* Styles for number inside the last card */
+.card-container > div:last-child > h1 {
     color: rgba(255, 255, 255, 0.84);
     text-align: center;
-    /* font-family: HelveticaNeue; */
     font-size: 2.875rem;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
+/* Media query for medium-sized screens (1300px or less) */
 @media (max-width: 1300px) {
     .card-container {
         flex-wrap: wrap; /* Allow items to wrap to the next line */
@@ -119,16 +121,13 @@
 @media (max-width: 769px) {
     .card-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
-        /* justify-content: space-around; */
         padding-right: 20px;
         margin-top: 2.44rem;
         width: 93%;
         margin-left: 1.87rem;
-        
     }
-    
 
     .card-container > div {
         width: 100%; /* Make each div take full width */

@@ -35,7 +35,7 @@
 }
 
 
-.top-navbar-container>div:nth-child(2) {
+.top-navbar-container>div:last-child {
     display: flex;
     height: 3.5rem;
     padding: 0.5rem 1rem;
@@ -91,4 +91,24 @@
     font-weight: 500;
     line-height: normal;
     background: linear-gradient(0deg, #EA7E7E 0%, #EA7E7E 100%), #FFF;
+}
+
+#hamburger-logo-container {
+    display: none;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 834px) {
+    #hamburger-logo-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tnb-category-img {
+        display: none;
+    }
 }

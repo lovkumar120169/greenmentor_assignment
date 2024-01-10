@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Table.css"
+import "./Styles/Table.css"
 export const Table = () => {
     let data = [
         { month: "Jan", emissions: 1790, ratio: 137.3, change: "15%↓" },

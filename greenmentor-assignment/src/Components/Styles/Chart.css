@@ -1,7 +1,5 @@
+/* Styles for the chart container */
 .chart-container {
-    /* style={{ width: "93%", marginBottom: "30px", marginTop: "30px",marginLeft:"1.63rem" }}
-     */
-    /* width: min-max(93%,62.8rem); */
     max-width: 89%;
     min-width: 1.8rem;
     margin-bottom: 30px;
@@ -14,7 +12,8 @@
     padding: 0rem 1.44rem 0.63rem 1.25rem;
 }
 
-.chart-container>div {
+/* Styles for elements inside the chart container */
+.chart-container > div {
     display: flex;
     height: 4rem;
     padding: 1.25rem;
@@ -25,10 +24,10 @@
     font-size: 0.875rem;
 }
 
-
+/* Media query for smaller screens (1000px or less) */
 @media (max-width: 1000px) {
     .chart-container {
-        margin:auto;
+        margin: auto; /* Center the chart container horizontally */
         margin-top: 30px;
         margin-bottom: 30px;
     }

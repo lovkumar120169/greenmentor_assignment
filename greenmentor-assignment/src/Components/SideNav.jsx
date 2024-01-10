@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
-import "./SideNav.css";
+import React, { useContext, useState } from 'react'
+import "./Styles/SideNav.css";
 import energy from "../assets/Images/energy.svg"
+import { IoMdClose } from "react-icons/io";
 import {
     Menu,
     MenuButton,
@@ -8,14 +9,27 @@ import {
     MenuItem
 } from '@chakra-ui/react';
 import { Fakecontext } from './ContextAPI';
+import logo from "../assets/Images/logo.png";
 
+// Functional component for the side navigation bar
 export const SideNav = () => {
-    const {Setvalue}=useContext(Fakecontext)
+    // Destructuring values from the context
+    const { Setvalue, isOpen, SetOpen } = useContext(Fakecontext)
+
+    // Function to handle changes and set values in the context
+    const ChangeFun = (e) => {
+        SetOpen(false)
+        Setvalue(e.target.value)
+    }
+
     return (
         <div>
-            <div className='sidenav-container'>
+            <div className='sidenav-container' id={isOpen ? "mobile-sidebar" : ""}>
                 <div className='sidenav-img'>
-                    <img src="https://s3-alpha-sig.figma.com/img/7017/0b71/3d08985c3dc4a95e3950693faa9eed19?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ic-~0BNRO2zRSZllD1QqbD~tbPRrZj3gPKGtNLZ0Aa5OBbrZ3Y~6eusCcX5-9mwI7LqUrdx2BbIH6JT427RKRZw8G59blcAXx9GPlDbmjNG63EBRM~v-o6CBi4gmoN-EmGSd~MUoQgIEpAZ1wpuSRwNM-zygpRe7FbZTSMcz0MGI~yufsy~SdGuD1vYrZxweO5~y9xuwaysTwN8bekP85vgonpdosGlv-4SpSu2RN5Q~BlDbPz-ufP3KAtwSsB8~UdHj~aNmkdX~rBeFQTF-be55TfZl02MyqRUhbOaT53HkIm2-CMwqMeNuYVcbBJreVg8iIF3yGkoTBiImoN0hiA__" alt="" />
+                    <img src={logo} alt="site-logo" />
+                    <div style={{ color: "white", fontSize: "30px" }} >
+                        {isOpen ? <IoMdClose onClick={() => SetOpen(false)} /> : ""}
+                    </div>
                 </div>
 
 
@@ -31,9 +45,9 @@ export const SideNav = () => {
                                 Energy
                             </MenuButton>
                             <MenuList style={{ marginRight: "-20px" }}>
-                                <MenuItem onClick={()=>Setvalue("Category-1")} >Category-1</MenuItem>
-                                <MenuItem onClick={()=>Setvalue("Category-2")}>Category-2</MenuItem>
-                                <MenuItem onClick={()=>Setvalue("Category-3")}>Category-3</MenuItem>
+                                <MenuItem value="Category-1" onClick={(e) => ChangeFun(e)} >Category-1</MenuItem>
+                                <MenuItem value="Category-2" onClick={(e) => ChangeFun(e)}>Category-2</MenuItem>
+                                <MenuItem value="Category-3" onClick={(e) => ChangeFun(e)}>Category-3</MenuItem>
                             </MenuList>
                         </Menu>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -76,7 +90,7 @@ export const SideNav = () => {
                 </div>
 
             </div>
-            <div className='sidenav-last-section'>
+            <div className='sidenav-last-section' id={isOpen?"last-section":""}>
                 <p>Powered by</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="117" height="26" viewBox="0 0 117 26" fill="none">
                     <g clip-path="url(#clip0_34_31)">
@@ -92,3 +106,4 @@ export const SideNav = () => {
         </div>
     )
 }
+

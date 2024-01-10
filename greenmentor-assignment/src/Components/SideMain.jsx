@@ -1,15 +1,15 @@
 import React from 'react'
 import { TopNav } from './TopNav'
 import { TopSelect } from './TopSelect'
-import { Card } from './Card'
 import { DoughnutChart } from './DoughnutChart'
 import { Charts } from './Chart'
 import { Table } from './Table'
-import "./SideMain.css"
+import "./Styles/SideMain.css"
+import Card from './Card'
 
 export const SideMain = () => {
     return (
-        <div  style={{width:"100%"}}>
+        <div style={{ width: "100%" }}>
             <TopNav />
             <TopSelect />
             <Card />

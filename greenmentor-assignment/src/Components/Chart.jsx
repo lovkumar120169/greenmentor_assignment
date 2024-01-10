@@ -1,5 +1,6 @@
+ // Import necessary dependencies from React, Chart.js, and Chart.js for React
 import React from 'react';
-import "./Chart.css"
+import "./Styles/Chart.css"
 import {
     Chart as ChartJS,
     LinearScale,
@@ -14,6 +15,7 @@ import {
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
 
+// Register Chart.js components
 ChartJS.register(
     LinearScale,
     CategoryScale,
@@ -26,6 +28,7 @@ ChartJS.register(
     BarController
 );
 
+// Data for labels and emissions/revenue information
 const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const jsonData = {
@@ -353,84 +356,88 @@ const jsonData = {
     ]
 }
 
-
+// Helper functions to retrieve emission and R/E data for a specific year and month
 const getEmissionData = (year, month) => {
     const entry = jsonData.Emissions.find(entry => entry["Month "] === month && entry["Year "] === year);
     return entry ? entry["Emissions(in CO2e)"] : 0;
-  };
-  
-  const getREData = (year, month) => {
+};
+
+const getREData = (year, month) => {
     const entry = jsonData.Emissions.find(entry => entry["Month "] === month && entry["Year "] === year);
-    return entry ? entry["R\/E"]  : 0;
-  };
-  
-  const data = {
+    return entry ? entry["R\/E"] : 0;
+};
+
+// Data configuration for the Chart component
+const data = {
     labels,
     datasets: [
-      {
-        type: 'line',
-        label: 'R/E-2023',
-        borderColor: 'rgb(238,201,109)',
-        borderWidth: 2,
-        fill: true,
-        data: labels.map(month => getREData(2023, month)),
-        yAxisID: 'y1',
-      },
-      {
-        type: 'line',
-        label: 'R/E-2022',
-        borderColor: 'rgb(255, 99, 132)',
-        borderWidth: 2,
-        fill: false,
-        data: labels.map(month => getREData(2022, month)),
-        yAxisID: 'y1',
-      },
-      {
-        type: 'bar',
-        label: 'Emission-2023',
-        backgroundColor: 'rgb(84,111,198)',
-        data: labels.map(month => getEmissionData(2023, month)),
-        borderColor: 'white',
-        borderWidth: 2,
-        yAxisID: 'y',
-      },
-      {
-        type: 'bar',
-        label: 'Emission-2022',
-        backgroundColor: 'rgb(145,203,116)',
-        data: labels.map(month => getEmissionData(2022, month)),
-        yAxisID: 'y',
-      },
+        {
+            type: 'line',
+            label: 'R/E-2023',
+            borderColor: 'rgb(238,201,109)',
+            borderWidth: 2,
+            fill: true,
+            data: labels.map(month => getREData(2023, month)),
+            yAxisID: 'y1',
+        },
+        {
+            type: 'line',
+            label: 'R/E-2022',
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 2,
+            fill: false,
+            data: labels.map(month => getREData(2022, month)),
+            yAxisID: 'y1',
+        },
+        {
+            type: 'bar',
+            label: 'Emission-2023',
+            backgroundColor: 'rgb(84,111,198)',
+            data: labels.map(month => getEmissionData(2023, month)),
+            borderColor: 'white',
+            borderWidth: 2,
+            yAxisID: 'y',
+        },
+        {
+            type: 'bar',
+            label: 'Emission-2022',
+            backgroundColor: 'rgb(145,203,116)',
+            data: labels.map(month => getEmissionData(2022, month)),
+            yAxisID: 'y',
+        },
     ],
-  };
-  const options = {
+};
+
+// Configuration options for the Chart component
+const options = {
     scales: {
-      y: {
-        beginAtZero: true,
-        position: 'left',
-        title: {
-          display: true,
-          text: 'Emissions (CO2e)',
+        y: {
+            beginAtZero: true,
+            position: 'left',
+            title: {
+                display: true,
+                text: 'Emissions (CO2e)',
+            },
         },
-      },
-      y1: {
-        beginAtZero: true,
-        position: 'right',
-        title: {
-          display: true,
-          text: 'R/E',
+        y1: {
+            beginAtZero: true,
+            position: 'right',
+            title: {
+                display: true,
+                text: 'R/E',
+            },
         },
-      },
     },
-  };
-  
-  export function Charts() {
+};
+
+// React functional component for rendering the chart
+export function Charts() {
     return (
-      <div className='chart-container'>
-        <div>
-         <p>Emission/Revenue</p>
+        <div className='chart-container'>
+            <div>
+                <p>Emission/Revenue</p>
+            </div>
+            <Chart type='bar' data={data} options={options}/>
         </div>
-        <Chart type='bar' data={data} options={options}/>
-      </div>
     );
-  }
+}

@@ -1,4 +1,4 @@
-.top-select-main-container{
+.top-select-main-container {
     display: flex;
     justify-content: end;
     margin-right: 4.92rem;
@@ -27,5 +27,5 @@
     font-size: 0.75rem;
     font-weight: 500;
     color: #02AB6C;
-    
+
 }
