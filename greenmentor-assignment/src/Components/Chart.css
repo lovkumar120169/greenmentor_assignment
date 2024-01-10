@@ -24,3 +24,12 @@
     font-weight: 500;
     font-size: 0.875rem;
 }
+
+
+@media (max-width: 1000px) {
+    .chart-container {
+        margin:auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

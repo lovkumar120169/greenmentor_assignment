@@ -2,10 +2,10 @@
     display: flex;
     /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
     gap: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 2.44rem;
-    width: 93%;
-    /* margin-left: 1.87rem; */
+    width: 89%;
+    margin-left: 1.5rem;
 }
 
 .card-inner-div {
@@ -118,11 +118,17 @@
 /* Media query for smaller screens (768px or less) */
 @media (max-width: 769px) {
     .card-container {
-        flex-direction: column; /* Change to a column layout for smaller screens */
-        align-items: center; /* Center-align items */
-        margin: auto;
-        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 20px;
+        /* justify-content: space-around; */
+        padding-right: 20px;
+        margin-top: 2.44rem;
+        width: 93%;
+        margin-left: 1.87rem;
+        
     }
+    
 
     .card-container > div {
         width: 100%; /* Make each div take full width */

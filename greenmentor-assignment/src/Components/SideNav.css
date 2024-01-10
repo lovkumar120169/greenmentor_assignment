@@ -263,7 +263,7 @@
     text-transform: uppercase;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 834px) {
     .sidenav-container{
         display: none;
     }
