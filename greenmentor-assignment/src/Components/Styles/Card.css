@@ -117,6 +117,19 @@
     }
 }
 
+@media (max-width: 1390px) {
+    .card-container {
+        width: 95%;
+        gap: 10px;
+
+    }
+
+    /* .card-container > div {
+        width: calc(50% - 10px);
+        margin-bottom: 1.5rem; 
+    } */
+}
+
 /* Media query for smaller screens (768px or less) */
 @media (max-width: 769px) {
     .card-container {

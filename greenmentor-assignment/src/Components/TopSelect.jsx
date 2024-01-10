@@ -17,7 +17,7 @@ export const TopSelect = () => {
                     <MenuButton className="select">
                         {date}
                     </MenuButton>
-                    <MenuList style={{ marginRight: "-20px" }}>
+                    <MenuList >
                         <MenuItem onClick={() => Setdate("Jan’22 - Dec’23")}>Jan’22 - Dec’23</MenuItem>
                         <MenuItem onClick={() => Setdate("Jan’23 - Mar’23")}>Jan’23 - Mar’23</MenuItem>
                         <MenuItem onClick={() => Setdate("Apr’23 - Jun’23")}>Apr’23 - Jun’23</MenuItem>
