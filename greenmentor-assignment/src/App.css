@@ -2,4 +2,8 @@
   margin: 0;
   padding: 0;
   background: linear-gradient(0deg, rgba(2, 171, 108, 0.04) 0%, rgba(2, 171, 108, 0.04) 100%), #FFF;
+  font-family: 'Inter', sans-serif;
 }
+/* @media (max-width: 769px) {
+
+} */

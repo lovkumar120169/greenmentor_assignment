@@ -262,3 +262,12 @@
     line-height: normal;
     text-transform: uppercase;
 }
+
+@media (max-width: 769px) {
+    .sidenav-container{
+        display: none;
+    }
+    .sidenav-last-section{
+        display: none;
+    }
+}

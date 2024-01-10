@@ -5,6 +5,7 @@
     border-radius: 0.75rem;
     border: 1px solid #EBEBEB;
     background: #FFF;
+    
 }
 .doughnutchart-container>div{
     display: flex;
@@ -29,4 +30,15 @@
     border: 1px solid #EBEBEB;
     background: #FFF;
     box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.02), 0px 2px 16px 0px rgba(0, 0, 0, 0.02), 0px 8px 80px 0px rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 769px) {
+    .doughnutchart-container-expand-section{
+        display: none;
+    }
+    .doughnutchart-container>div{
+        width: 90%;
+    }
+    .doughnutchart-container {
+        width: auto;
+    }
 }

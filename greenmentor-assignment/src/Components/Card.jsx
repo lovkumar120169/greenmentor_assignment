@@ -41,9 +41,8 @@ export const Card = () => {
                 </div>
             </div>
             <div>
-                <h2>Total number of
-                    reached suppliers</h2>
-                <h1>143</h1>
+                <h2>Total number of reached suppliers</h2>
+                <h1 style={{marginTop:"0.88rem"}}>143</h1>
             </div>
         </div>
     )

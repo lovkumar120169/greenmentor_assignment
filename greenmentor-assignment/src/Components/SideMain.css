@@ -1,0 +1,24 @@
+
+.chart-table-container{
+    display: flex;
+    margin-left: 1.5rem;
+    gap: 2.06rem;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 1350px) {
+    .chart-table-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 0;
+    }
+
+    .chart-table-container > div {
+        width: 90%;
+        
+        margin: auto;
+        margin-bottom: 15px;
+    }
+}
